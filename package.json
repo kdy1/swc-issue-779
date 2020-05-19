@@ -1,17 +1,21 @@
 {
-  "name": "test",
+  "name": "swctest",
   "private": true,
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "swc ./src -d ./lib",
+    "test": "node build.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "devDependencies": {},
   "dependencies": {
     "@swc/cli": "^0.1.24",
-    "@swc/core": "^1.1.44"
+    "@swc/core": "^1.1.44",
+    "@swc/register": "^0.1.7",
+    "browserslist": "^4.9.1",
+    "core-js": "^3.6.4",
+    "react": "^16.13.1",
+    "regenerator-runtime": "^0.13.5"
   }
 }
