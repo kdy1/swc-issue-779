@@ -1,5 +1,10 @@
+const swc = require("@swc/core");
+const output = swc.transformSync(`
+import 'core-js'
+const a = Promise.resolve('111')
+a().then(console.log)
+`,
 {
-  "test": [".*.tsx$",".*.ts$", ".*.js$"],
   "module": {
     "type": "commonjs"
   },
@@ -32,3 +37,9 @@
     }
   }
 }
+)
+console.log(output.code)
+// 'use strict';
+// require('core-js');
+// const a = Promise.resolve('111');
+// a().then(console.log);
