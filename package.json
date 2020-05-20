@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "swc ./src -d ./lib",
-    "test": "node build.js"
+    "test": "node build.js",
+    "plugin": "node plugin.js"
   },
   "devDependencies": {},
   "dependencies": {
